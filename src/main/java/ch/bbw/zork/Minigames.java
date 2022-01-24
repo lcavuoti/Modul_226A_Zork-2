@@ -1,5 +1,7 @@
 package ch.bbw.zork;
 
+import java.util.Locale;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Minigames {
@@ -36,5 +38,30 @@ public class Minigames {
         }
         return trueFalse;
     }
+
+    public boolean rockPaperScissors(){
+        System.out.println("Make a move! (rock/paper/scissors)");
+        String playerMove = scanner.nextLine().toLowerCase(Locale.ROOT);
+
+        Random random = new Random();
+        int randomNumber = random.nextInt(3);
+
+        String computerMove;
+        if (randomNumber == 0) {
+            computerMove = "rock";
+        } else if (randomNumber == 1) {
+            computerMove = "paper";
+        } else {
+            computerMove = "scissors";
+        }
+        if (computerMove.equals(playerMove)){
+            System.out.println("Success!");
+            return false;
+
+        } else{
+            return true;
+        }
+    }
+
 
 }
