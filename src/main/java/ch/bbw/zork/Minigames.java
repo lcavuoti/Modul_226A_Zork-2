@@ -6,7 +6,6 @@ import java.util.Scanner;
 
 public class Minigames {
     private Scanner scanner = new Scanner(System.in);
-
     public boolean randomNumberGame(){
         System.out.println("Guess a number from 1 to 10");
         int userInput = scanner.nextInt();
@@ -31,7 +30,7 @@ public class Minigames {
             if (userInputCommand.equals("/kill")) {
                 System.out.println("Monster is dead");
             } else {
-                System.out.println("The Monster killed you \n You are dead");
+                System.out.println("The Monster took a life away");
                 trueFalse = true;
             }
             break;
